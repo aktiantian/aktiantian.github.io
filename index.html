@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/18/python%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">judy&#39;s first blog</a>
+      <a class="article-title" href="/2020/11/18/python%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Python的数据类型</a>
     </h1>
   
 
@@ -86,12 +86,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###judy’s first blog</p>
+        <p>#Python的数据类型<br>##List列表</p>
+<h5 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h5><p>是一种有序集合，可以随时添加删除</p>
 <ul>
-<li>1111</li>
-<li>2222</li>
-<li>8888<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;helloWorld&quot;</span>)</span><br></pre></td></tr></table></figure>
+<li><p>集合的格式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classmates=[<span class="string">&quot;王一博&quot;</span>,<span class="string">&quot;易烊千玺&quot;</span>,<span class="string">&quot;罗云熙&quot;</span>]</span><br></pre></td></tr></table></figure></li>
+<li><p>输出长度</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(classmates)</span><br></pre></td></tr></table></figure></li>
+<li><p>classmates[-1] 表示最后一个元素,[-2]表示倒数第二个。</p>
 </li>
+<li><p>添加</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classmates.append(<span class="string">&#x27;丁程鑫&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>插入 –在第二个位置加入人名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">classmates.insert(<span class="number">1</span>,<span class="string">&#x27;张艺兴&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>删除 –默认删除最后一个</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">classmates.pop()</span><br><span class="line">classmates.pop(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h5></li>
+<li><p>里面的list只算一个元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s=[<span class="string">&#x27;python&#x27;</span>,<span class="string">&#x27;java&#x27;</span>,[<span class="string">&#x27;asp&#x27;</span>,<span class="string">&#x27;php&#x27;</span>],<span class="string">&#x27;c&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>##元组tuple<br>元组与list类似，一经定义无法修改。</p>
+<ul>
+<li>定义方式<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">t1=(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">t2=(<span class="number">1</span>,)</span><br></pre></td></tr></table></figure></li>
+<li>面试题<br>l=[‘a’,’b’]<br>t=(‘A’,’b’,l)<br>t[2][0]=’c’是否能成功—可以</li>
+</ul>
+<p>##字典Dictionary<br>一种映射类型，无序。key:value。好处查询添加删除速度快，数据再多都很快。占用内存大。key要用不可变对象，不要是list等可变的。字典是哈希算法。key不能重复。</p>
+<ul>
+<li>定义方式<br>原始对应<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">names=[<span class="string">&quot;王一博&quot;</span>,<span class="string">&quot;易烊千玺&quot;</span>,<span class="string">&quot;罗云熙&quot;</span>]</span><br><span class="line">score=[<span class="string">&quot;90&quot;</span>,<span class="string">&quot;80&quot;</span>,<span class="string">&quot;100&quot;</span>]</span><br></pre></td></tr></table></figure>
+字典对应<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d=&#123;<span class="string">&#x27;王一博&#x27;</span>:<span class="number">90</span>,<span class="string">&#x27;易烊千玺&#x27;</span>:<span class="number">90</span>,<span class="string">&#x27;罗云熙&#x27;</span>:<span class="number">100</span>&#125;</span><br><span class="line">d[<span class="string">&#x27;王一博&#x27;</span>]</span><br></pre></td></tr></table></figure></li>
+<li>添加<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d[<span class="string">&#x27;丁程鑫&#x27;</span>]=<span class="number">95</span></span><br></pre></td></tr></table></figure></li>
+<li>覆盖数据<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d[<span class="string">&#x27;丁程鑫&#x27;</span>]=<span class="number">100</span></span><br></pre></td></tr></table></figure></li>
+<li>判断是否包含某数据<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;丁程鑫&#x27;</span> <span class="keyword">in</span> d</span><br><span class="line"><span class="string">&#x27;宋小宝&#x27;</span> <span class="keyword">in</span> d</span><br></pre></td></tr></table></figure></li>
+<li>取值的两种方式，推荐get，get没找到不会报错。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d[<span class="string">&#x27;宋小宝&#x27;</span>]</span><br><span class="line">d.get(<span class="string">&#x27;宋小宝&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>删除pop。<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d.pop(<span class="string">&#x27;丁程鑫&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>##集合set<br>无序不重复的集合，与字典类似，但是只存储key，被用来求交集并集差集，去重复。</p>
+<ul>
+<li>创建两种定义方式， 会自动去重复</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;</span><br><span class="line">s=<span class="built_in">set</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">s=<span class="built_in">set</span>([<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>添加<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s.add(<span class="number">1</span>)</span><br><span class="line">s.add(<span class="number">4</span>)</span><br></pre></td></tr></table></figure></li>
+<li>删除<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.remove(<span class="number">4</span>)</span><br></pre></td></tr></table></figure></li>
+<li>交集 并集<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s1=<span class="built_in">set</span>([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br><span class="line">s2=<span class="built_in">set</span>([<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line">s1&amp;s1</span><br><span class="line">s1|s2</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -203,7 +245,7 @@
       <ul>
         
           <li>
-            <a href="/2020/11/18/python%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">judy&#39;s first blog</a>
+            <a href="/2020/11/18/python%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Python的数据类型</a>
           </li>
         
           <li>
