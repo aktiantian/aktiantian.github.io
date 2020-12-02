@@ -64,6 +64,88 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-while-写数学口诀" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/while-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/" class="article-date">
+  <time datetime="2020-12-02T15:40:31.000Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/while-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/">while 写数学口诀</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>要求：写出while循环打印乘法口诀表的四种格式</p>
+        
+          <p class="article-more-link">
+            <a href="/2020/12/02/while-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/02/while-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/" data-id="cki7l03w20001k8vf0nwrgs38" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-for-写数学口诀" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/for-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/" class="article-date">
+  <time datetime="2020-12-02T15:40:05.000Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/for-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/">for 写数学口诀</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>要求：写出for循环打印乘法口诀表的四种格式</p>
+        
+          <p class="article-more-link">
+            <a href="/2020/12/02/for-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/02/for-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/" data-id="cki7l03w00000k8vf1o3kg4x4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Python应用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/20/Python%E5%BA%94%E7%94%A8/" class="article-date">
@@ -77,46 +159,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>#学员系统<br>‘’’初始化界面<br>=============================学员管理系统=============================<br>1 查看学员信息 2 添加学员信息<br>3 删除学员信息 4 退出系统<br>=====================================================================<br>请输入对应选择</p>
-<p>需求分析：六个功能<br>1 存储学员信息源<br>2 查看学院信息<br>3 添加学员信息<br>4 删除学员信息<br>5 退出<br>6 交互界面</p>
-<p>‘’’<br>#建立数据源</p>
-<p>stu_list=[{‘name’:’罗云熙’,’age’:16,’classid’:’china’},<br>    {‘name’:’ivy’,’age’:12,’classid’:’japan’},<br>    {‘name’:’magit’,’age’:12,’classid’:’japan’}]</p>
-<p>def show_stu_info():<br>    if len(stu_list)==0:<br>        print(‘+’*20,’没有学员信息’,’+’*20)<br>        return</p>
-<pre><code>print(&#39;|&#123;0:&lt;5&#125;|&#123;1:&lt;20&#125;|&#123;2:&lt;5&#125;|&#123;3:&lt;20&#125;|&#39;.format(&#39;sid&#39;,&#39;name&#39;,&#39;age&#39;,&#39;classid&#39;))
-print(&#39;-&#39;*50)
-for i,stu_dic in enumerate(stu_list):
-    print(&#39;|&#123;0:&lt;5&#125;|&#123;1:&lt;20&#125;|&#123;2:&lt;5&#125;|&#123;3:&lt;20&#125;|&#39;.format(i+1,stu_dic[&#39;name&#39;],stu_dic[&#39;age&#39;],stu_dic[&#39;classid&#39;]))</code></pre>
-<p>#3添加学员<br>def add_stu(name,age,classid):<br>    stu_dict={}<br>    stu_dict[‘name’]=name<br>    stu_dict[‘age’]=age<br>    stu_dict[‘classid’]=classid<br>    stu_list.append(stu_dict)<br>#add_stu(‘朱一龙’,18,’qing’)</p>
-<p>#show_stu_info()</p>
-<p>#4删除学员<br>def del_stu(sid):<br>    sid_int=int(sid)#强制转换int<br>    stu_list.pop(sid_int-1)</p>
-<p>#del_stu(3)<br>#show_stu_info()</p>
-<p>#5退出系统<br>def log_out():<br>    pass</p>
-<p>#界面交互<br>while True:#死循环，等待用户输入<br>    #初始化界面<br>    print(‘+’*20,’学员管理系统’,’+’*20)<br>    print(‘{:1} {:15} {:15}’.format(‘ ‘,’1. 查看学员信息’,’2. 添加学员信息’))<br>    print(‘{:1} {:15} {:15}’.format(‘ ‘,’2. 删除学员信息’,’2. 退出’))<br>    print(‘+’*50)<br>    key=input(‘请输入对应的选择’)</p>
-<pre><code>if key==&#39;1&#39;:
-    print(&#39;+&#39; * 20, &#39;学员信息浏览&#39;, &#39;+&#39; * 20)
-    show_stu_info()
-    input(&#39;按回车返回：&#39;)
-elif key==&#39;2&#39;:
-    print(&#39;+&#39; * 20, &#39;添加学员信息&#39;, &#39;+&#39; * 20)
-    name=input(&#39;请输入姓名&#39;)
-    age=input(&#39;请输入年龄&#39;)
-    classid=input(&#39;请输入学号&#39;)
-    add_stu(name,age,classid)
-    show_stu_info()
-    input(&#39;按回车返回：&#39;)
-elif key==&#39;3&#39;:
-    print(&#39;+&#39; * 20, &#39;删除学员信息&#39;, &#39;+&#39; * 20)
-    show_stu_info()
-    sid=input(&quot;请输入要删除的学员的sid&quot;)
-    del_stu(sid)
-    show_stu_info()
-    input(&#39;按回车返回：&#39;)
-elif key==&#39;4&#39;:
-    log_out()
-    print(&#39;+&#39; * 20, &#39;再见&#39;, &#39;+&#39; * 20)
-    break
-else:
-    print(&#39;+&#39; * 20, &#39;无效输入&#39;, &#39;+&#39; * 20)</code></pre>
-
+        
+          <p class="article-more-link">
+            <a href="/2020/11/20/Python%E5%BA%94%E7%94%A8/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -258,7 +305,7 @@ else:
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -269,6 +316,14 @@ else:
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/12/02/while-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/">while 写数学口诀</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/02/for-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/">for 写数学口诀</a>
+          </li>
         
           <li>
             <a href="/2020/11/20/Python%E5%BA%94%E7%94%A8/">(no title)</a>

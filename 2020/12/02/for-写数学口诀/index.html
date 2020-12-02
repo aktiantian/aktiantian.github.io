@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>for 写数学口诀 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="要求：写出for循环打印乘法口诀表的四种格式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="for 写数学口诀">
+<meta property="og:url" content="http://example.com/2020/12/02/for-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="要求：写出for循环打印乘法口诀表的四种格式">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-02T15:40:05.000Z">
+<meta property="article:modified_time" content="2020-12-02T15:44:23.713Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-for-写数学口诀" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/for-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/" class="article-date">
+  <time datetime="2020-12-02T15:40:05.000Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      for 写数学口诀
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>要求：写出for循环打印乘法口诀表的四种格式</p>
+<a id="more"></a>
+<p>def MulFor1():<br>    for i in range(1,10):<br>        for j in range(i):<br>            j += 1<br>            print(“%d*%d=%2d”%(i,j,i<em>j),end=’ ‘)<br>        print(‘’)<br>‘’’1</em>1= 1<br>2<em>2= 4 2</em>1= 2<br>3<em>3= 9 3</em>2= 6 3<em>1= 3<br>4</em>4=16 4<em>3=12 4</em>2= 8 4<em>1= 4<br>5</em>5=25 5<em>4=20 5</em>3=15 5<em>2=10 5</em>1= 5<br>6<em>6=36 6</em>5=30 6<em>4=24 6</em>3=18 6<em>2=12 6</em>1= 6<br>7<em>7=49 7</em>6=42 7<em>5=35 7</em>4=28 7<em>3=21 7</em>2=14 7<em>1= 7<br>8</em>8=64 8<em>7=56 8</em>6=48 8<em>5=40 8</em>4=32 8<em>3=24 8</em>2=16 8<em>1= 8<br>9</em>9=81 9<em>8=72 9</em>7=63 9<em>6=54 9</em>5=45 9<em>4=36 9</em>3=27 9<em>2=18 9</em>1= 9 ‘’’</p>
+<p>def MulFor2():<br>    for i in range(1, 10):<br>        for j in range(i,10):<br>            print(“%d*%d=%2d”%(i,j,i<em>j), end=’ ‘)<br>        print(‘’)<br>‘’’<br>1</em>1= 1 1<em>2= 2 1</em>3= 3 1<em>4= 4 1</em>5= 5 1<em>6= 6 1</em>7= 7 1<em>8= 8 1</em>9= 9<br>2<em>2= 4 2</em>3= 6 2<em>4= 8 2</em>5=10 2<em>6=12 2</em>7=14 2<em>8=16 2</em>9=18<br>3<em>3= 9 3</em>4=12 3<em>5=15 3</em>6=18 3<em>7=21 3</em>8=24 3<em>9=27<br>4</em>4=16 4<em>5=20 4</em>6=24 4<em>7=28 4</em>8=32 4<em>9=36<br>5</em>5=25 5<em>6=30 5</em>7=35 5<em>8=40 5</em>9=45<br>6<em>6=36 6</em>7=42 6<em>8=48 6</em>9=54<br>7<em>7=49 7</em>8=56 7<em>9=63<br>8</em>8=64 8<em>9=72<br>9</em>9=81 ‘’’</p>
+<p>def MulFor3():<br>    for i in range(1, 10):<br>        for k in range(1,i):<br>            print(end=’ ‘<em>7)<br>        for j in range(1,11-i):<br>            print(“%d</em>%d=%2d”%(i,j,i<em>j),end=’ ‘)<br>        print(‘’)<br>‘’’<br>1</em>1= 1 1<em>2= 2 1</em>3= 3 1<em>4= 4 1</em>5= 5 1<em>6= 6 1</em>7= 7 1<em>8= 8 1</em>9= 9<br>       2<em>1= 2 2</em>2= 4 2<em>3= 6 2</em>4= 8 2<em>5=10 2</em>6=12 2<em>7=14 2</em>8=16<br>              3<em>1= 3 3</em>2= 6 3<em>3= 9 3</em>4=12 3<em>5=15 3</em>6=18 3<em>7=21<br>                     4</em>1= 4 4<em>2= 8 4</em>3=12 4<em>4=16 4</em>5=20 4<em>6=24<br>                            5</em>1= 5 5<em>2=10 5</em>3=15 5<em>4=20 5</em>5=25<br>                                   6<em>1= 6 6</em>2=12 6<em>3=18 6</em>4=24<br>                                          7<em>1= 7 7</em>2=14 7<em>3=21<br>                                                 8</em>1= 8 8<em>2=16<br>                                                        9</em>1= 9 ‘’’</p>
+<p>def MulFor4():<br>    for i in range(1, 10):<br>        for k in range(1,i):<br>            print(end=’ ‘<em>7)<br>        for j in range(i, 10):<br>            print(“%d</em>%d=%2d”%(i,j,i*j),end=’ ‘)<br>        print(‘’)</p>
+<p>‘’’<br>1<em>1= 1 1</em>2= 2 1<em>3= 3 1</em>4= 4 1<em>5= 5 1</em>6= 6 1<em>7= 7 1</em>8= 8 1<em>9= 9<br>       2</em>2= 4 2<em>3= 6 2</em>4= 8 2<em>5=10 2</em>6=12 2<em>7=14 2</em>8=16 2<em>9=18<br>              3</em>3= 9 3<em>4=12 3</em>5=15 3<em>6=18 3</em>7=21 3<em>8=24 3</em>9=27<br>                     4<em>4=16 4</em>5=20 4<em>6=24 4</em>7=28 4<em>8=32 4</em>9=36<br>                            5<em>5=25 5</em>6=30 5<em>7=35 5</em>8=40 5<em>9=45<br>                                   6</em>6=36 6<em>7=42 6</em>8=48 6<em>9=54<br>                                          7</em>7=49 7<em>8=56 7</em>9=63<br>                                                 8<em>8=64 8</em>9=72<br>                                                        9*9=81 ‘’’<br>MulFor1()<br>MulFor2()<br>MulFor3()<br>MulFor4()</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/02/for-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/" data-id="cki7l03w00000k8vf1o3kg4x4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/12/02/while-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          while 写数学口诀
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/11/20/Python%E5%BA%94%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Python/" style="font-size: 10px;">Python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/02/while-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/">while 写数学口诀</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/02/for-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/">for 写数学口诀</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/20/Python%E5%BA%94%E7%94%A8/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/18/python%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">Python的数据类型</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/18/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
