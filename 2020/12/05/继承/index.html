@@ -7,15 +7,15 @@
   
   <title>继承 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#encoding UTF-8class Animal(object):    def run (self):        print(“animal is running”)class Dog(Animal):    passclass Cat(Animal):    pass ‘’’子类中方法与父类一样的话，会覆盖父类方法，并且可以添加别的方法，可用于更新操作，而不需要动父类’’’class">
+  <meta name="description" content="#encoding UTF-8class Animal(object):    def run (self):        print(“animal is running”)class Dog(Animal):    passclass Cat(Animal):    pass">
 <meta property="og:type" content="article">
 <meta property="og:title" content="继承">
 <meta property="og:url" content="http://example.com/2020/12/05/%E7%BB%A7%E6%89%BF/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="#encoding UTF-8class Animal(object):    def run (self):        print(“animal is running”)class Dog(Animal):    passclass Cat(Animal):    pass ‘’’子类中方法与父类一样的话，会覆盖父类方法，并且可以添加别的方法，可用于更新操作，而不需要动父类’’’class">
+<meta property="og:description" content="#encoding UTF-8class Animal(object):    def run (self):        print(“animal is running”)class Dog(Animal):    passclass Cat(Animal):    pass">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-05T14:10:20.000Z">
-<meta property="article:modified_time" content="2020-12-05T14:10:55.579Z">
+<meta property="article:modified_time" content="2020-12-05T14:13:46.859Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -89,6 +89,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>#encoding UTF-8<br>class Animal(object):<br>    def run (self):<br>        print(“animal is running”)<br>class Dog(Animal):<br>    pass<br>class Cat(Animal):<br>    pass</p>
+<a id="more"></a>
+
 <p>‘’’子类中方法与父类一样的话，会覆盖父类方法，并且可以添加别的方法，可用于更新操作，而不需要动父类’’’<br>class Dog(Animal):<br>    def run(self):<br>        #调用父类的run方法 super<br>        super().run()<br>        print(“Dog is running”)<br>    def eat(self):<br>        print(‘eat meat’)</p>
 <p>‘’’dog = Dog()<br>dog.run()<br>Dog.run<br>dog.eat()’’’</p>
 <p>#多态 运行时才能确定对象的类型</p>
@@ -113,6 +115,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/12/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          常用的设计模式
+        
+      </div>
+    </a>
   
   
     <a href="/2020/12/05/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
@@ -168,6 +179,10 @@
       <ul>
         
           <li>
+            <a href="/2020/12/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">常用的设计模式</a>
+          </li>
+        
+          <li>
             <a href="/2020/12/05/%E7%BB%A7%E6%89%BF/">继承</a>
           </li>
         
@@ -181,10 +196,6 @@
         
           <li>
             <a href="/2020/12/02/while-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/">while 写数学口诀</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/02/for-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/">for 写数学口诀</a>
           </li>
         
       </ul>

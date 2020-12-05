@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>常用的设计模式 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#面试出现频率很高‘’’’’’‘’’pthon内置函数，可以创建快速list如快速把字典内容变成list’’’‘’’">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用的设计模式">
+<meta property="og:url" content="http://example.com/2020/12/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#面试出现频率很高‘’’’’’‘’’pthon内置函数，可以创建快速list如快速把字典内容变成list’’’‘’’">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-05T15:50:35.000Z">
+<meta property="article:modified_time" content="2020-12-05T15:51:46.809Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-常用的设计模式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="article-date">
+  <time datetime="2020-12-05T15:50:35.000Z" itemprop="datePublished">2020-12-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      常用的设计模式
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#面试出现频率很高<br>‘’’’’’<br>‘’’pthon内置函数，可以创建快速list<br>如快速把字典内容变成list’’’<br>‘’’</p>
+<a id="more"></a>
+<p>eg.把 d={‘x’:’a’,’y’:’b’,’z’:’c’}转成[‘y=b’,’x=a’,’z=c’]<br>‘’’<br>d= {‘x’:’a’,’y’:’b’,’z’:’c’}<br>l=[k+’=’+v for k,v in d.items()]#[‘x=a’, ‘y=b’, ‘z=c’]<br>print(l)<br>#生成list[1,2,3,4,5,6,7,8,9]<br>r=range(1,11)<br>print(r)#range(1, 11)<br>print (list(r))#[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</p>
+<p>#生成[1<em>1,2</em>2…10<em>10]<br>print(x</em>x for x in range(1,10))#&lt;generator object <genexpr> at 0x000002122BC872C8&gt; 迭代器<br>print([x*x for x in range(1,10)])#[1, 4, 9, 16, 25, 36, 49, 64, 81]</p>
+<p>#‘abc’,’123’输出 a1 a2 a3 b1 b2 b3 c1 c2 c3<br>print([a+n for a in ‘abc’ for n in ‘123’])<br>#过滤.<br>print([a+n for a in ‘a.b.c’ for n in ‘123’ if a!=’.’])</p>
+<p>‘’’<br>循环过程中不断推算出后续的元素，这样就不必创建完整的list，这种一边循环一边计算的机制，被称之为生成器，generator<br>两种定义：<br>1 列表方式[x<em>x for x in range(1,10)]<br>2 yield关键字生成(x</em>x for x in range(1,10))</p>
+<p>‘’’<br>g=(x*x for x in range(1,10))<br>print(g)<br>print(next(g))<br>print(next(g))<br>for n in g:<br>    print(n,end=’ ‘)<br>print(‘’)</p>
+<p>#yield的用法，生成斐波那契数列 后一个数永远是前两个数字的和 1 1 2 3 5 8<br>def fib(max):<br>    n,a,b =0,0,1<br>    while n&lt;max:<br>        print(b,end=’ ‘)<br>        a,b=b,a+b<br>        n=n+1<br>    return ‘done’<br>fib(6)</p>
+<p>#输出关键字换成yield<br>def fib1(max):<br>    n,a,b =0,0,1<br>    while n&lt;max:<br>        yield b<br>        a,b=b,a+b<br>        n=n+1<br>    return ‘done’</p>
+<p>g=fib1(9)<br>for n in g:<br>    print(n,end=’| ‘)<br>#用next方法<br>while True:<br>    try:<br>        x=next(g)<br>        print(x)<br>    except StopIteration as e:<br>        print(‘没有数据了’,e.value)<br>        break</p>
+<p>#迭代器<br>‘’’列表生成式<br>python 内置的非常简单却强大的可以用来创建list的生成式<br>快速把字典内容转化为list<br>‘’’</p>
+<p>‘’’<br>可用于for循环的叫可迭代对象 interable<br>1 集合数据类型，list tuple dict set str等<br>2 generator ,生成器，带yield的generator function等<br>‘’’</p>
+<p>‘’’<br>直接可用于next方法的叫可以生成器对象 interator’<br>生成器可以同时作用于for循环和next()函数，不断调用直到抛出StopIteration错误<br>‘’’</p>
+<p>‘’’<br>迭代器<br>‘’’</p>
+<p>#判断一个对象是否可迭代,interable</p>
+<h1 id="from-collections-abc-import-Iterable"><a href="#from-collections-abc-import-Iterable" class="headerlink" title="from collections.abc import Iterable"></a>from collections.abc import Iterable</h1><h1 id="print-isinstance-Iterable-判断lsit是否可迭代"><a href="#print-isinstance-Iterable-判断lsit是否可迭代" class="headerlink" title="print(isinstance([],Iterable))#判断lsit是否可迭代"></a>print(isinstance([],Iterable))#判断lsit是否可迭代</h1><h1 id="print-isinstance-Iterable-判断字典是否可迭代"><a href="#print-isinstance-Iterable-判断字典是否可迭代" class="headerlink" title="print(isinstance({},Iterable))#判断字典是否可迭代"></a>print(isinstance({},Iterable))#判断字典是否可迭代</h1><h1 id="print-isinstance-123-Iterable"><a href="#print-isinstance-123-Iterable" class="headerlink" title="print(isinstance(123,Iterable))"></a>print(isinstance(123,Iterable))</h1><h1 id="print-isinstance-‘123’-Iterable"><a href="#print-isinstance-‘123’-Iterable" class="headerlink" title="print(isinstance(‘123’,Iterable))"></a>print(isinstance(‘123’,Iterable))</h1><p>#判断一个对象是否是生成器 iterator</p>
+<h1 id="from-collections-abc-import-Iterator"><a href="#from-collections-abc-import-Iterator" class="headerlink" title="from collections.abc import Iterator"></a>from collections.abc import Iterator</h1><h1 id="print-isinstance-Iterator-判断lsit是否可迭代"><a href="#print-isinstance-Iterator-判断lsit是否可迭代" class="headerlink" title="print(isinstance([],Iterator))#判断lsit是否可迭代"></a>print(isinstance([],Iterator))#判断lsit是否可迭代</h1><h1 id="print-isinstance-Iterator-判断字典是否可迭代"><a href="#print-isinstance-Iterator-判断字典是否可迭代" class="headerlink" title="print(isinstance({},Iterator))#判断字典是否可迭代"></a>print(isinstance({},Iterator))#判断字典是否可迭代</h1><h1 id="print-isinstance-123-Iterator"><a href="#print-isinstance-123-Iterator" class="headerlink" title="print(isinstance(123,Iterator))"></a>print(isinstance(123,Iterator))</h1><h1 id="print-isinstance-‘123’-Iterator"><a href="#print-isinstance-‘123’-Iterator" class="headerlink" title="print(isinstance(‘123’,Iterator))"></a>print(isinstance(‘123’,Iterator))</h1><p>iter([])<br>from collections.abc import Iterator<br>print(isinstance(iter([]),Iterator))#判断lsit是否可迭代<br>print(isinstance(iter({}),Iterator))#判断字典是否可迭代<br>print(isinstance(iter(‘123’),Iterator))</p>
+<p>‘’’<br>#作业：<br>用生成器生成 函数名triangles<br>[[1],<br>[1,1],<br>[1,2,1],<br>[1,3,3,1],<br>[1,4,6,4,1]]</p>
+<p>‘’’</p>
+<p>n=0<br>results=[]<br>for t in triangles():<br>    print(t)<br>    results.append(t)<br>    n=n+1<br>    if n==10:<br>        break<br>if results==[<br>    [1],<br>    [1,1],<br>    [1,2,1],<br>    [1,3,3,1],<br>    [1,4,6,4,1]<br>    ]:<br>    print (‘测试通过’)<br>else:<br>    print (‘失败’)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" data-id="ckibvkmen0000mwvffxquenj0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/05/%E7%BB%A7%E6%89%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">继承</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Python/" style="font-size: 10px;">Python</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/12/05/%E5%B8%B8%E7%94%A8%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">常用的设计模式</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/05/%E7%BB%A7%E6%89%BF/">继承</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/05/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">构造函数</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/03/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E4%BB%A5%E5%8F%8A%E6%96%87%E4%BB%B6%EF%BC%8C%E7%9B%AE%E5%BD%95%E6%8B%B7%E8%B4%9D/">文件读写以及文件，目录拷贝</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/02/while-%E5%86%99%E6%95%B0%E5%AD%A6%E5%8F%A3%E8%AF%80/">while 写数学口诀</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
